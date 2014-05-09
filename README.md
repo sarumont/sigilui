@@ -24,7 +24,7 @@ Use one of the non-broken views:
 ```
 <org.sigil.ui.widget.TextView
 	android:text="@string/app_name"
-	font="SourceSansPro.ttf" />
+	font="sourcesanspro.ttf" />
 ```
 
 The font loader will assume your fonts are in `assets/fonts`. You do **not** need to specify
@@ -33,7 +33,7 @@ The font loader will assume your fonts are in `assets/fonts`. You do **not** nee
 ```
 <org.sigil.ui.widget.TextView
 	android:text="@string/app_name"
-	font="adobe/SourceSansPro.ttf" />
+	font="adobe/sourcesanspro.ttf" />
 ```
 
 # License
