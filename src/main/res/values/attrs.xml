@@ -1,6 +1,7 @@
 <resources>
 	<declare-styleable name="TextView">
 		<attr name="font" format="string" />
+		<attr name="android:textStyle" />
 	</declare-styleable>
 </resources>
 

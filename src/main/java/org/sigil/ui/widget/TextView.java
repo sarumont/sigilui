@@ -8,7 +8,6 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
-
 /**
  * Custom TextView implementation
  */
@@ -36,12 +35,11 @@ public class TextView extends android.widget.TextView {
 
 		final TypedArray style = context.obtainStyledAttributes( attrs, R.styleable.TextView );
 		if ( null != style ) {
-
-			final String path = style.getString( R.styleable.TextView_font );
-			final Typeface typeface = FontLoader.load( context, path );
-			if ( null != typeface ) {
-                setTypeface(typeface);
-			}
+			setTypeface( 
+					FontLoader.load(
+						context, 
+						style.getString( R.styleable.TextView_font ),
+						style.getInt( R.styleable.TextView_android_textStyle, 0 )));
             style.recycle();
 		}
 	}
