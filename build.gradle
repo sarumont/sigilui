@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.2'
+    }
+}
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 'android-10'
+    buildToolsVersion '19.0.3'
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
