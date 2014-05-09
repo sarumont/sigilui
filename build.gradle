@@ -7,10 +7,21 @@ buildscript {
     }
 }
 apply plugin: 'android-library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 'android-10'
     buildToolsVersion '19.0.3'
+
+	defaultConfig {
+		minSdkVersion 7
+		targetSdkVersion 19
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_7
+		targetCompatibility JavaVersion.VERSION_1_7
+	}
 
     buildTypes {
         release {
@@ -18,4 +29,19 @@ android {
             proguardFile getDefaultProguardFile('proguard-android.txt')
         }
     }
+}
+
+def aarFile = file('build/sigilui.aar')
+artifacts {
+	archives aarFile
+}
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			repository(url: "file:///home/sarumont/.m2/repository")
+			pom.groupId = 'org.sigil'
+			pom.artifactId = 'sigilui'
+			pom.version = '0.1.0-SNAPSHOT'
+		}
+	}
 }
