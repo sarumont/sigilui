@@ -20,6 +20,10 @@ public class FontLoader {
 	 */
 	public static final Typeface load( final Context context, String path ) {
 
+		if ( null == path || 0 == path.length() ) {
+			return null;
+		}
+
 		// normalize path
 		if ( ! path.startsWith( "fonts/" ) ) {
 			path = "fonts/"+path;
