@@ -2,6 +2,17 @@
 
 Various custom Android widgets.
 
+## Usage
+
+SigilUI is available via Maven central. Import into your Gradle project using:
+
+```
+dependencies {
+	compile "org.sigil:sigilui:0.1.0@aar"
+	...
+}
+```
+
 ## Custom Font Faces
 
 Android's `TextView` and derivitives do not allow specifying a custom typeface from the layout XML.
