@@ -98,8 +98,8 @@ public class Accordion implements View.OnClickListener {
 		}
 
 		Button button = (Button)view;
-		float x = view.getX();
-		float y = view.getY()-5;
+		int[] loc = new int[2];
+		view.getLocationOnScreen( loc );
 		if ( v.getVisibility() == View.VISIBLE ) {
 			// hide it
 			v.setVisibility( View.GONE );
@@ -108,8 +108,7 @@ public class Accordion implements View.OnClickListener {
 			}
 
 			// don't scroll if hiding all items
-			x = -1;
-			y = -1;
+			loc[0] = -1;
 		} else {
 
 			// show it
@@ -138,8 +137,11 @@ public class Accordion implements View.OnClickListener {
 			}
 		}
 
-		if ( null != scrollView && x > -1 ) {
-			scrollView.smoothScrollTo( (int)x, (int)y );
+		Log.i( TAG, "onClick(): scrollview="+scrollView+", x="+loc[0]+", y="+loc[1] );
+		if ( null != scrollView && loc[0] > -1 ) {
+			final ScrollView sv = scrollView;
+			final int y = loc[1];
+			scrollView.post( new Runnable() { public void run() { sv.smoothScrollTo( 0, y ); } });
 		}
 	}
 
