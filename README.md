@@ -81,4 +81,4 @@ assets/
 # License
 
 SigilUI is licensed under the GPLv3. If you would like to license the library for commercial use,
-please contact me.
+please contact the author.
