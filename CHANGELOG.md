@@ -1,5 +1,3 @@
-
-
 **v0.1.0**
 
 
@@ -14,3 +12,9 @@
 [view](https://github.com/sarumont/sigilui/commit/6fd3d74fde393e29ff02f81b0ac3a9b9ca882dc7) &bull; Add gradle instructions  
 [view](https://github.com/sarumont/sigilui/commit/2cbfafe7fe8a05f734a6b98769fd956684e435e7) &bull; Fix scrolling  
 [view](https://github.com/sarumont/sigilui/commit/4a075f3607f354bb8703be1ef3776ca631a5299b) &bull; Add license  
+
+**v0.1.1**
+
+
+[view](https://github.com/sarumont/sigilui/commit/cf4423c1db4fa18c64c4a12ac9b31bcc5b51245f) &bull; indentation, vim modeline  
+[view](https://github.com/sarumont/sigilui/commit/af6ff85445b7ea86c12ca6d1f61f2c46f589b42e) &bull; add gradle config to deploy to maven central  

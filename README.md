@@ -8,7 +8,7 @@ SigilUI is available via Maven central. Import into your Gradle project using:
 
 ```
 dependencies {
-	compile "org.sigil:sigilui:0.1.0@aar"
+	compile "org.sigil:sigilui:0.1.1@aar"
 	...
 }
 ```
